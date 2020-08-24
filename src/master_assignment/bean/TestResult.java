@@ -1,8 +1,9 @@
 package master_assignment.bean;
 
 import java.util.Date;
+import java.util.Set;
 
-public class TestResult {
+public class TestResult implements Comparable<TestResult> {
 	public Date testdate;
 	public int testid;
 	public int studentId;
@@ -25,4 +26,15 @@ public class TestResult {
 
 	}
 
+	@Override
+	public int compareTo(TestResult o) {
+		// TODO Auto-generated method stub
+		
+		
+		return o.marks-this.marks;
+		
+		
+	}
+
+	
 }

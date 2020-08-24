@@ -1,6 +1,8 @@
 package master_assignment.bean;
 
-public class Student {
+import java.util.Set;
+
+public class Student implements Comparable<Student> {
 	public int studentId;
 	private String student_name;
 	private int phone_number;
@@ -49,6 +51,13 @@ public class Student {
 		return ("student id:  " + this.getStudent_id() + "  " + "Student name:  " + this.getstudent_name() + "  "
 				+ "phone no: " + this.getphone_number() + "  " + "email: " + this.getEmail() + "\n");
 
+	}
+
+	@Override
+	public int compareTo(Student o) {
+		// TODO Auto-generated method stuib
+	
+		return o.student_name.compareTo(this.student_name);
 	}
 
 }
